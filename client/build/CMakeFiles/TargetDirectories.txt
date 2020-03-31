@@ -1,0 +1,3 @@
+/home/fedor/Programming/TestTasks/BilingualClientServer/client/build/CMakeFiles/rebuild_cache.dir
+/home/fedor/Programming/TestTasks/BilingualClientServer/client/build/CMakeFiles/client.dir
+/home/fedor/Programming/TestTasks/BilingualClientServer/client/build/CMakeFiles/edit_cache.dir

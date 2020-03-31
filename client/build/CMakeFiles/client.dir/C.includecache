@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fedor/Programming/TestTasks/BilingualClientServer/client/src/main.c
+arpa/inet.h
+-
+inttypes.h
+-
+netinet/in.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+unistd.h
+-
+
