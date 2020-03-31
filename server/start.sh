@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./src/server.py
+./src/server.py&
+pid=$!

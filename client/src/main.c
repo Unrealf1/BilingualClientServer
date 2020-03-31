@@ -5,6 +5,7 @@
 #include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <unistd.h>
 
 
@@ -57,12 +58,15 @@ int clientRoutine(uint16_t port, size_t message_size, size_t cycles) {
             perror("read");
             goto end;
         }
-
         if (server_answer == correct_checksum) {
             ++success;
         } else {
             fprintf(stderr, "%s\n", "Answer is incorrect!");
         }
+        struct timespec time;
+        time.tv_sec  = 0;
+        time.tv_nsec = 100000000L;
+        nanosleep(&time, NULL);
     }
     
 end:
@@ -74,9 +78,10 @@ end:
 
 int autoClientRoutine() {
     size_t message_size = 20;
-    uint16_t port = 1234;
+    uint16_t port = 4321;
+    size_t cycles = 5;
 
-    return clientRoutine(port, message_size, 20);
+    return clientRoutine(port, message_size, cycles);
 }
 
 int main(int argc, char** argv) {

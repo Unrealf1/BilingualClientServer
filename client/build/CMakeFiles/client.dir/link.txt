@@ -1,1 +1,0 @@
-/usr/bin/cc  -Wall -Wextra -fsanitize=address,undefined -g   CMakeFiles/client.dir/src/main.c.o  -o client 

@@ -23,8 +23,18 @@ async def handle_client(client_reader, client_writer):
 
 if __name__ == "__main__":
     host = '127.0.0.1'
-    port = 1234
+    port = 4321
+
+    print("Starting server...")
 
     loop = asyncio.get_event_loop()
-    loop.create_task(asyncio.start_server(handle_client, host, port))
-    loop.run_forever()
+    server = asyncio.start_server(handle_client, host, port)
+    loop.create_task(server)
+    try:
+        loop.run_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.close()
+        loop.close()
+    

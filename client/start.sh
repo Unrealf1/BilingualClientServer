@@ -2,7 +2,7 @@
 
 client="./build/client"
 if [ -f "$client" ]; then
-    ./${client}
+    ./${client} $1
 else 
     echo "$client does not exist"
     echo "run client/build.sh first"
